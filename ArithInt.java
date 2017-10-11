@@ -17,3 +17,5 @@ class ArithInt{
 		System.out.println("x*y="+(x*y));
 	}
 }
+
+// edit test
