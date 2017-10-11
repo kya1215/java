@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
 class MaxHwa{
+
+	static int max(int a, int b, int c){
+		int max = a;
+		if (b > max) max = b;
+		if (c > max) max = c;
+		return max;
+	}
+
 	public static void main(String[] args){
 		Scanner stdIn = new Scanner(System.in);
 
@@ -18,17 +26,9 @@ class MaxHwa{
 			age[i] = stdIn.nextInt();
 		}
 
-		int maxHeight = height[0];
-		if (height[1]>maxHeight) maxHeight = height[1];
-		if (height[2]>maxHeight) maxHeight = height[2];
-
-		int maxWeight = weight[0];
-		if (weight[1]>maxWeight) maxWeight = weight[1];
-		if (weight[2]>maxWeight) maxWeight = weight[2];
-
-		int maxAge = age[0];
-		if (age[1]>maxAge) maxAge = age[1];
-		if (age[2]>maxAge) maxAge = age[2];
+		int maxHeight = max(height[0], height[1], height[2]);
+		int maxWeight = max(weight[0], weight[1], weight[2]);
+		int maxAge = max(age[0], age[1], age[2]);
 
 		System.out.println("身長の最大値は"+maxHeight);
 		System.out.println("体重の最大値は"+maxWeight);
